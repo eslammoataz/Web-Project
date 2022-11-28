@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Update.css">
+    <link rel="shortcut icon" href="logoo.png">
+    <title>Update Information</title>
+</head>
+<body>
+
+<header>
+    <a href="../homepage/homepage.html"><img src="LogoMakr-6hmZdM.png" class="logo"></a>
+    <ul>
+        <li><a href="../homepage/homepage.html" >Home</a></li>
+        <li><a href="../forum/forum.html" class="active"> Forum</a></li>
+        <li><a href="../cover/index.html">projects</a></li>
+        <li><a href="#section3">About Us</a></li>
+        <li><a href="../join/join.html">Join</a></li>
+    </ul>
+</header>
+
+<div class="transition">
+    <div id='add-form' class='add-page'>
+        <div class="form-box">
+            <form id='add' class='input-group-add'>
+                <p>
+                    Update Laboratory <br> Information
+                </p>
+                <label  id = "ganan" class="lab">Laboratory ID </label>
+                <input id="ID" type='text' class='input-field' placeholder='Enter Laboratory ID' required>
+                <label class="lab">Laboratory Name</label>
+                <input type='text' class='input-field' placeholder='Enter Laboratory Name' required>
+                <label class="lab">Building Number</label>
+                <input type='text' class='input-field' placeholder='Enter Building Number' required>
+                <label class="lab">Floor Number</label>
+                <input type='text' class='input-field' placeholder='Enter Floor Number' required>
+                <label class="lab"> Number of PCs </label>
+                <input type='number' class='input-field2' min="0" max="100" step="1"  placeholder='Enter Number of PCs' required>
+                <label class="lab"> Capacity</label>
+                <input type='number' class='input-field2' min="0" max="100" step="1"  placeholder='Enter Capacity' required>
+                <label class="lab"> Number of Chairs </label>
+                <input type='number' class='input-field2' min="0" max="100" step="1"  placeholder='Enter Number of chairs' required>
+
+                <br><br>
+                <label class="status">Status</label>
+                <a><input class="checkbox" type="radio" name="creditCheck" id="c01" value="Yes" checked/>Active</a>
+                <a><input class="checkbox" type="radio" name="creditCheck" id="c02" value="No"/>Under maintenance</a>
+                <button type="submit" class='save'>Save Changes</button>
+                <button type="submit" class='cancel'>Cancel</button>
+                <a href="../add ,delete page/Delete.html">
+                    <button type="button" onclick="return check();" class="delete">Delete Laboratory</button>
+                </a>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="containerr" id="section3">
+    <div class="footer">
+        <div class="footer-heading footer1">
+            <h1>About us</h1>
+            <a href="#">Blog</a>
+            <a href="#">Demo</a>
+            <a href="#">Customers</a>
+            <a href="#">Investors</a>
+            <a href="#">Terms of Services</a>
+        </div>
+        <div class="footer-heading footer1">
+            <h1>Contact Us</h1>
+            <a href="#">Jobs</a>
+            <a href="#">Suppports</a>
+            <a href="#">Contact</a>
+            <a href="#">Sponsorships</a>
+        </div>
+        <div class="footer-heading footer1">
+            <h1>Social Media</h1>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">twitter</a>
+            <a href="#">linkedin</a>
+        </div>
+    </div>
+    <div class="textt">
+        Copyright &copy; All rights reserved, 2022 I-Tech<br>
+    </div>
+</div>
+<script defer src="Update.js"></script>
+</body>
+</html>

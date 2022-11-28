@@ -1,0 +1,316 @@
+body{
+    width: 100%;
+    /*height: 725px;*/
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(rgb(1, 9, 33), rgba(21, 4, 88, 0.1)), url('pexels-cottonbro-4065876.jpg');
+    background-repeat: no-repeat;
+
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: montserrat, sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+.banner {
+    width: 100%;
+    height: 725px;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(rgb(1, 9, 33), rgba(21, 4, 88, 0.1)), url('pexels-cottonbro-4065876.jpg');
+
+    /* background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('pexels-cottonbro-4065876.jpg'); */
+}
+
+header {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    margin: auto;
+    top: 0;
+    left: 0;
+    padding: 20px 110px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.logo {
+    position: relative;
+    width: 140px;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+header ul {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+header ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 15px;
+    position: relative;
+    transition: 0.5s;
+
+
+}
+
+header ul li a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    margin: 0 15px;
+    transition: 0.5s;
+
+
+}
+
+header ul li a::after {
+    content: '';
+    height: 4px;
+    width: 0;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background: rgb(193, 151, 37);
+    transition: 0.5s;
+}
+
+header ul li a:hover::after {
+    width: 100%;
+}
+
+header ul li a:hover {
+    color: rgb(193, 151, 37);
+    transition: 0.5s;
+}
+
+header ul li a.active {
+    color: rgb(193, 151, 37);
+
+}
+
+header ul li .active::after {
+    content: '';
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background: rgb(193, 151, 37);
+    transition: 0.5s;
+}
+
+header.sticky {
+    /* padding: 5px 100px; */
+    background-color: rgb(17, 13, 47);
+    width: 100%;
+    padding: 20px 110px;
+    height: 70px;
+    z-index: 10;
+    top: 0px;
+    transition: 0.6s;
+    /* position: sticky; */
+}
+
+header.sticky .logo {
+    width: 120px;
+}
+
+/*end header*/
+
+
+.input-field:focus{
+    border-color: #cb8906;
+    color: #cb8906;
+}
+
+/*.input-field2:focus{*/
+/*    border-color: #cb8906;*/
+/*    color: #cb8906;*/
+/*}*/
+
+button:active {
+    transform: scale(0.9);
+    transition: 0.5s;
+
+}
+
+.transition {
+    animation: transition 1s;
+}
+
+@keyframes transition {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.form-box {
+    width: 420px;
+    height: 575px;
+    position: relative;
+    margin: 12% auto;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    overflow: hidden;
+    border-radius: 25px;
+    transition: 0.5s;
+}
+
+
+.input-group-add {
+    top: 40px;
+    position: absolute;
+    width: 310px;
+    transition: .5s;
+}
+
+p {
+    color: white;
+    margin-left: 80px;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 15px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+
+button {
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    margin-top: 15px;
+    background: rgb(193, 151, 37);
+    border: 0;
+    outline: none;
+    border-radius: 25px;
+    color:white;
+}
+
+span {
+    color: #777;
+    font-size: 12px;
+    bottom: 68px;
+    position: absolute;
+}
+
+#add {
+    left: 50px;
+}
+
+#add input {
+    color: white;
+    font-size: 15px;
+}
+
+
+/* start footer */
+.containerr {
+    width: 100%;
+    /* height: 305px; */
+    padding-top: 5px;
+    background-color: rgb(17, 13, 47);
+    color: #cb8906;
+    font-family: sans-serif;
+}
+
+.footer {
+    width: 100%;
+    background-color: rgb(17, 13, 47);
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 5px auto;
+}
+
+.footer-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+
+}
+
+.footer-heading h1 {
+    position: relative;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    font-weight: normal;
+    font-size: 35px;
+    margin: 40px 0;
+}
+
+.footer-heading a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-heading a:hover {
+    color: #cb8906;
+    transition: 0.5s;
+}
+
+.footer-heading h1::after {
+    content: '';
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background: rgb(193, 151, 37);
+    /* transition: 0.5s; */
+}
+
+/* .footer-heading h1:hover::after{
+   width:0;
+} */
+.footer-heading h1:hover {
+    color: rgb(193, 151, 37);
+    transition: 0.5s;
+}
+
+.textt {
+    text-align: center;
+    padding: 25px;
+    opacity: 0.9;
+    /* font-weight: bold; */
+    /* margin-top: 20px; */
+    /* background-color: rgb(9, 12, 45); */
+}
+
+
+/* end footer */

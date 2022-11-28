@@ -1,0 +1,388 @@
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family:montserrat, sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+  background-image:  linear-gradient(rgb(1, 9, 33),rgba(21, 4, 88, 0.1)),url('heaader.jpg');
+  background-position: center;
+  background-size: cover;
+   width: 100%;
+    position: relative;
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+}
+/* .bar{
+  width: 100%;
+  background-color: rgb(17, 13, 47);
+  height: 70px;
+  top: 0;
+
+} */
+header{
+  z-index: 1000;
+  width: 100%;
+  margin: auto;
+  top: 0;
+  left: 0;
+  padding: 20px 110px ;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.logo{
+  position: relative;
+  width: 140px;
+  cursor: pointer; 
+  transition: 0.3s;
+
+}
+header ul{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+header ul li{
+  list-style: none;
+  display: inline-block;
+  margin: 0 15px;
+  position: relative;
+  transition: 0.5s;
+
+}
+header ul li a{
+  position: relative;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  margin: 0 15px;
+  transition: 0.5s;   
+}
+header ul li a::after{
+  content: '';
+  height: 4px;
+  width: 0;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background: rgb(193, 151, 37);
+  transition: 0.5s;
+}
+header ul li a:hover::after{
+  width:100%;
+}
+header ul li a:hover{
+  color: rgb(193, 151, 37);
+  transition: 0.5s;
+}
+header ul li a.active{
+  color: rgb(193, 151, 37);
+  
+}
+header ul li .active::after{
+  content: '';
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background: rgb(193, 151, 37);
+  transition: 0.5s;
+}
+header.sticky{
+  background-color: rgb(17, 13, 47);
+  width: 100%;
+  padding: 20px 110px ;
+  height: 70px;
+  z-index: 1000;
+  top: 0px;
+  transition: 0.6s;
+position: fixed;
+}
+header.sticky .logo{
+  width: 120px;
+}
+.container h1 {
+	font-weight: bold;
+	margin: 0;
+}
+
+
+p {
+	font-size: 15px;
+	/* font-weight: 100; */
+	line-height: 20px;
+	letter-spacing: 0.5px;
+	margin: 25px 0 35px;
+}
+
+.form-container a {
+	color: #333;
+	font-size: 14px;
+	text-decoration: none;
+	margin: 15px 0;
+}
+
+button {
+	border-radius: 25px;
+	border: 1px solid rgb(193, 151, 37);
+	background-color:rgb(193, 151, 37);
+	color: rgb(17, 13, 47);
+	font-size: 12px;
+	font-weight: bold;
+	padding: 15px 30px;
+	text-transform: uppercase;
+  margin: 25px;
+	transition: transform 80ms ease-in;
+  cursor: pointer;
+
+}
+
+button:active {
+	transform: scale(0.95);
+}
+
+button.ghost {
+	background-color: rgb(193, 151, 37);
+	border-color: rgb(193, 151, 37);
+}
+
+form {
+	background-color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 50px;
+	height: 100%;
+	text-align: center;
+}
+
+input {
+	background-color: #eee;
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 100%;
+  outline: none;
+}
+
+.focus{
+    border: 1px solid #eee;
+    border-radius: 4px;
+    transition: 0.25s ease;
+}
+
+.focus:focus{
+    border-color: #cb8906;
+    color: #cb8906;
+}
+
+.container {
+	background-color: #fff;
+	border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	position: relative;
+	overflow: hidden;
+	width: 768px;
+	max-width: 100%;
+	min-height: 600px;
+  max-height: 750px;
+  margin: 25px auto;
+}
+
+.form-container {
+	position: absolute;
+  display: flex;
+  flex-direction: column;
+	top: 0;
+	height: 100%;
+	transition: all 0.6s ease-in-out;
+}
+
+.sign-in-container {
+	left: 0;
+	width: 50%;
+	z-index: 2;
+}
+
+.container.right-panel-active .sign-in-container {
+	transform: translateX(100%);
+}
+
+.sign-up-container {
+	left: 0;
+	width: 50%;
+	opacity: 0;
+	z-index: 1;
+}
+
+.container.right-panel-active .sign-up-container {
+	transform: translateX(100%);
+	opacity: 1;
+	z-index: 5;
+}
+
+.overlay-container {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+	transition: transform 0.6s ease-in-out;
+	z-index: 100;
+}
+
+.container.right-panel-active .overlay-container{
+	transform: translateX(-100%);
+}
+
+.overlay {
+	background: rgb(17, 13, 47);
+	background: -webkit-linear-gradient(to right, rgb(17, 13, 47),rgb(31, 24, 84));
+	background: linear-gradient(to right,rgb(17, 13, 47), rgb(32, 25, 86));
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0 0;
+	color: #FFFFFF;
+	position: relative;
+	left: -100%;
+	height: 100%;
+	width: 200%;
+	transition: transform 0.6s ease-in-out;
+}
+
+.container.right-panel-active .overlay {
+  	transform: translateX(50%);
+}
+
+.overlay-panel {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	top: 0;
+	height: 100%;
+	width: 50%;
+	transition: transform 0.6s ease-in-out;
+}
+
+.overlay-left {
+	transform: translateX(-20%);
+}
+
+.container.right-panel-active .overlay-left {
+	transform: translateX(0);
+}
+
+.overlay-right {
+	right: 0;
+}
+
+.container.right-panel-active .overlay-right {
+	transform: translateX(20%);
+}
+
+.social-container {
+	margin: 20px 0;
+}
+
+.social-container a {
+	border-radius: 50%;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 10px;
+	height: 40px;
+	width: 40px;
+}
+.social-container a:hover {
+	background-color: rgb(186, 184, 181);
+	transition: 0.5s;
+}
+
+.social-container img {
+	
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 10px;
+	height: 40px;
+	width: 40px;
+	margin-top: 4px;
+}
+.containerr{
+  width: 100%;
+  /* height: 305px; */
+  margin-top: 100px;
+  padding-top: 5px;
+  background-color: rgb(17, 13, 47);
+  color:#cb8906;
+  font-family: sans-serif;
+}
+.footer{
+  width: 100%;
+  background-color: rgb(17, 13, 47);
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 5px auto;
+}
+.footer-heading{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  
+}
+.footer-heading h1{
+  position: relative;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  font-weight: normal;
+  font-size: 35px;
+  margin: 40px 0;
+}
+.footer-heading a{
+  color: white;
+  text-decoration: none;
+}
+.footer-heading a:hover{
+  color: #cb8906;
+  transition: 0.5s;
+}
+.footer-heading h1::after{
+  content: '';
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background: rgb(193, 151, 37);
+  /* transition: 0.5s; */
+}
+
+.footer-heading h1:hover{
+  color: rgb(193, 151, 37);
+  transition: 0.5s;
+}
+.textt{
+  text-align: center;
+  padding: 25px;
+  opacity: 0.9;
+  
+}
+
+

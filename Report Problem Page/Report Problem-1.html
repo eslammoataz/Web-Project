@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Report Style-2.css">
+    <link rel="shortcut icon" href="logoo.png">
+    <title>Report Problem</title>
+</head>
+<body>
+<header>
+    <a href="../homepage/homepage.html"><img src="LogoMakr-6hmZdM.png" class="logo"></a>
+    <ul>
+        <li><a href="../homepage/homepage.html" >Home</a></li>
+        <li><a href="../forum/forum.html" class="active"> Forum</a></li>
+        <li><a href="../cover/index.html">projects</a></li>
+        <li><a href="#section3">About Us</a></li>
+        <li><a href="../join/join.html">Join</a></li>
+    </ul>
+</header>
+<div class="transition">
+    <div class="box" id="Box">
+        <form>
+            <h1> What's happening? </h1> <br/>
+            <label class="lab">Laboratory ID </label>
+            <input id="ID" class="input-field" type="text" placeholder="Enter Laboratory ID" required> <br/>
+            <label class="lab"> Number of PC </label>
+            <input id="num_pc" class="input-field" type="text" placeholder="Enter Number of PC" required><br/>
+            <label class="lab">Date of Occurrence</label>
+            <input id="Date" class="input-field" type="date" placeholder=""><br>
+            <label class="lab">Choose Problem Type</label>
+            <input class="checkbox" type="radio" name="creditCheck" id="c01" value="Yes" checked/> Software
+            <input class="checkbox" type="radio" name="creditCheck" id="c02" value="No"/> Hardware
+            <br/>
+            <textarea id="description" class="mess" id="message" placeholder="Description of problem..." rows="3"
+                      required></textarea>
+            <br>
+            <input id="save" class="btn" type="submit" value="Submit">
+        </form>
+    </div>
+</div>
+<div class="containerr" id="section3">
+    <div class="footer">
+        <div class="footer-heading footer1">
+            <h1>About us</h1>
+            <a href="#">Blog</a>
+            <a href="#">Demo</a>
+            <a href="#">Customers</a>
+            <a href="#">Investors</a>
+            <a href="#">Terms of Services</a>
+        </div>
+        <div class="footer-heading footer1">
+            <h1>Contact Us</h1>
+            <a href="#">Jobs</a>
+            <a href="#">Suppports</a>
+            <a href="#">Contact</a>
+            <a href="#">Sponsorships</a>
+        </div>
+        <div class="footer-heading footer1">
+            <h1>Social Media</h1>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">twitter</a>
+            <a href="#">linkedin</a>
+        </div>
+    </div>
+    <div class="textt">
+        Copyright &copy; All rights reserved, 2022 I-Tech<br>
+    </div>
+</div>
+
+<script defer src="Report.js"></script>
+</body>
+</html>
